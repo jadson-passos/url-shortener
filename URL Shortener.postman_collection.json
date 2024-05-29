@@ -1,0 +1,633 @@
+{
+	"info": {
+		"_postman_id": "7dc63ac4-41f3-4663-a6ed-f6a4adc0cb72",
+		"name": "URL Shortener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21202502"
+	},
+	"item": [
+		{
+			"name": "Cadastro de usuário",
+			"item": [
+				{
+					"name": "Listar URLs do Usuário",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYThmZjY3LTQ3ODQtNGNlZC05MDUzLTU3MDVjNDAxMzcxNSIsImlhdCI6MTcxNjg1NDM3MywiZXhwIjoxNzE2OTQwNzczfQ.dBDo8-1UB8Z2PxhIR64N4IqU_0XCAjAN2CBOjWURMCE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/urls"
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/transactions/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "715"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 21:32:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactions\": [\n        {\n            \"id\": \"7853bd2e-a9b3-466a-9692-696e25824432\",\n            \"title\": \"Compras no Mercado\",\n            \"description\": \"Compra de café e cereal\",\n            \"amount\": 45.96,\n            \"created_at\": \"2023-09-02 20:50:41\",\n            \"session_id\": null\n        },\n        {\n            \"id\": \"856523f5-90c0-49b7-a573-9caee0243062\",\n            \"title\": \"Compras no Mercado\",\n            \"description\": \"Compra de café e cereal\",\n            \"amount\": -45.96,\n            \"created_at\": \"2023-09-02 20:51:05\",\n            \"session_id\": null\n        },\n        {\n            \"id\": \"da3c76aa-3e0a-4500-9fac-b5bc86d9f845\",\n            \"title\": \"Compras no Mercado\",\n            \"description\": \"Compra de café e cereal\",\n            \"amount\": -45.96,\n            \"created_at\": \"2023-09-02 20:51:39\",\n            \"session_id\": null\n        },\n        {\n            \"id\": \"55d874c7-075f-4826-b0c2-153261385c3d\",\n            \"title\": \"\",\n            \"description\": \"\",\n            \"amount\": -45.96,\n            \"created_at\": \"2023-09-02 20:52:02\",\n            \"session_id\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "401 Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/transactions/"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "24"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 22:21:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Unauthorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Redirecionar para URL Original",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/VXxSuc"
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/transactions/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "715"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 21:32:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactions\": [\n        {\n            \"id\": \"7853bd2e-a9b3-466a-9692-696e25824432\",\n            \"title\": \"Compras no Mercado\",\n            \"description\": \"Compra de café e cereal\",\n            \"amount\": 45.96,\n            \"created_at\": \"2023-09-02 20:50:41\",\n            \"session_id\": null\n        },\n        {\n            \"id\": \"856523f5-90c0-49b7-a573-9caee0243062\",\n            \"title\": \"Compras no Mercado\",\n            \"description\": \"Compra de café e cereal\",\n            \"amount\": -45.96,\n            \"created_at\": \"2023-09-02 20:51:05\",\n            \"session_id\": null\n        },\n        {\n            \"id\": \"da3c76aa-3e0a-4500-9fac-b5bc86d9f845\",\n            \"title\": \"Compras no Mercado\",\n            \"description\": \"Compra de café e cereal\",\n            \"amount\": -45.96,\n            \"created_at\": \"2023-09-02 20:51:39\",\n            \"session_id\": null\n        },\n        {\n            \"id\": \"55d874c7-075f-4826-b0c2-153261385c3d\",\n            \"title\": \"\",\n            \"description\": \"\",\n            \"amount\": -45.96,\n            \"created_at\": \"2023-09-02 20:52:02\",\n            \"session_id\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "401 Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/transactions/"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "24"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 22:21:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Unauthorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"example@example03.com\",\n  \"password\": \"password03\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/register",
+						"description": "Creates a transaction and saves a session id if it's not already saved.\n\n**Payload**\n\n| Field | Type | **Required** | **Nullable** | **Empty** |\n| --- | --- | --- | --- | --- |\n| title | string | ✅ | ❌ | ❌ |\n| description | string | ✅ | ❌ | ❌ |\n| amount | number | ✅ | ❌ | ❌ |\n| type | \"credit\" or \"debit\", default is \"credit\" | ✅ | ❌ | ❌ |"
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Compras no Mercado\",\n    \"description\": \"Compra de café e cereal\",\n    \"amount\": 45.96,\n    \"type\": \"debit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/transactions/"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "46"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 20:51:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transaction created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Encurtar URL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYThmZjY3LTQ3ODQtNGNlZC05MDUzLTU3MDVjNDAxMzcxNSIsImlhdCI6MTcxNjg1NDM3MywiZXhwIjoxNzE2OTQwNzczfQ.dBDo8-1UB8Z2PxhIR64N4IqU_0XCAjAN2CBOjWURMCE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"originalUrl\": \"https://teddy360.com.br/material/marco-legal-das-garantias-sancionado-entenda-o-que-muda/\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/url",
+						"description": "Creates a transaction and saves a session id if it's not already saved.\n\n**Payload**\n\n| Field | Type | **Required** | **Nullable** | **Empty** |\n| --- | --- | --- | --- | --- |\n| title | string | ✅ | ❌ | ❌ |\n| description | string | ✅ | ❌ | ❌ |\n| amount | number | ✅ | ❌ | ❌ |\n| type | \"credit\" or \"debit\", default is \"credit\" | ✅ | ❌ | ❌ |"
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Compras no Mercado\",\n    \"description\": \"Compra de café e cereal\",\n    \"amount\": 45.96,\n    \"type\": \"debit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/transactions/"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "46"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 20:51:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transaction created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/login",
+						"description": "Creates a transaction and saves a session id if it's not already saved.\n\n**Payload**\n\n| Field | Type | **Required** | **Nullable** | **Empty** |\n| --- | --- | --- | --- | --- |\n| title | string | ✅ | ❌ | ❌ |\n| description | string | ✅ | ❌ | ❌ |\n| amount | number | ✅ | ❌ | ❌ |\n| type | \"credit\" or \"debit\", default is \"credit\" | ✅ | ❌ | ❌ |"
+					},
+					"response": [
+						{
+							"name": "201 Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Compras no Mercado\",\n    \"description\": \"Compra de café e cereal\",\n    \"amount\": 45.96,\n    \"type\": \"debit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/transactions/"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "46"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 20:51:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transaction created successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Editar URL Encurtada",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYThmZjY3LTQ3ODQtNGNlZC05MDUzLTU3MDVjNDAxMzcxNSIsImlhdCI6MTcxNjg1NDM3MywiZXhwIjoxNzE2OTQwNzczfQ.dBDo8-1UB8Z2PxhIR64N4IqU_0XCAjAN2CBOjWURMCE"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"shortUrl\": \"HW7sTY\",\n  \"newDestination\": \"https://new-destination.com\"\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/url"
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/transactions/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transactions",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7853bd2e-a9b3-466a-9692-696e25824432"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "183"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 21:33:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7853bd2e-a9b3-466a-9692-696e25824432\",\n    \"title\": \"Compras no Mercado\",\n    \"description\": \"Compra de café e cereal\",\n    \"amount\": 45.96,\n    \"created_at\": \"2023-09-02 20:50:41\",\n    \"session_id\": null\n}"
+						},
+						{
+							"name": "401 Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/transactions/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transactions",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7853bd2e-a9b3-466a-9692-696e25824432"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "24"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 22:21:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Unauthorized\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Excluir URL Encurtada",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYThmZjY3LTQ3ODQtNGNlZC05MDUzLTU3MDVjNDAxMzcxNSIsImlhdCI6MTcxNjg1Nzg4MiwiZXhwIjoxNzE2OTQ0MjgyfQ.lLx0T3s9Trsc70pu6M4VZmgNo-BuxV6BSQx_0mQPX5c"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"shortUrl\": \"C9oNaM\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/url"
+					},
+					"response": [
+						{
+							"name": "200 OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/transactions/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transactions",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7853bd2e-a9b3-466a-9692-696e25824432"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "183"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 21:33:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"7853bd2e-a9b3-466a-9692-696e25824432\",\n    \"title\": \"Compras no Mercado\",\n    \"description\": \"Compra de café e cereal\",\n    \"amount\": 45.96,\n    \"created_at\": \"2023-09-02 20:50:41\",\n    \"session_id\": null\n}"
+						},
+						{
+							"name": "401 Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/transactions/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transactions",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7853bd2e-a9b3-466a-9692-696e25824432"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "24"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 02 Sep 2023 22:21:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Unauthorized\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,45 @@
+# Ignore version control directories
+.git/
+.gitignore
+.svn/
+.hg/
+
+# Ignore all logs
+logs/
+*.log
+npm-debug.log*
+
+# Ignore node_modules - very important if you're building a Node.js project
+node_modules/
+
+# Ignore build directories
+dist/
+build/
+tmp/
+
+# Ignore configuration files that may contain sensitive information
+.env
+*.env
+.env.local
+.env.*.local
+
+# Ignore miscellaneous non-essential files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Ignore specific large directories or files
+database/
+backups/
+*.tar.gz
+
+# Ignore IDE-specific files and directories
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Optionally ignore Dockerfile and docker-compose files
+# Dockerfile
+# docker-compose.yml
+# docker-compose.*.yml
